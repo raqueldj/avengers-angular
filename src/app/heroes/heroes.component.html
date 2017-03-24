@@ -1,0 +1,6 @@
+<div *ngFor='let hero of heroes; let i= index;'>
+  <app-hero [hero]='hero' (deleteRequest) = 'removeHero(i)'></app-hero>
+</div>
+
+<input type="text" #name/> <!--#name recupere valeur comme variable-->
+<button (click) = "addHero(name.value); name.value = '' " >Create</button>
